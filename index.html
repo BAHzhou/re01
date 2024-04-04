@@ -43,20 +43,65 @@
       .mgt8 {
         margin-top: 8px;
       }
+      .daohang {
+        padding: 10px;
+        border-bottom: 1px solid rgb(222, 220, 220);
+        font-size: 15px;
+      }
+      /* 水平居中 */
+      .conter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+      
+      /* 媒体查询：当屏幕宽度小于600px执行里面的css，用来适配不同屏幕 */
+      @media (max-width:600px) {
+        .cebian {
+          display: none;
+        }
+        /* 让内容区和数据区竖向排列 */
+        .shuxliang {
+          flex-direction: column;
+        }
+        /* 让右区与内容区边距保持一致 */
+        .youqu {
+          margin-left: 8px;
+        }
+        /* 数据块的边距和自动宽高 */
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
     </style>
   </head>
   <body class="flex">
     <!-- 侧边栏 -->
-    <div style="width: 200px; z-index: 2" class="baise yinying">
+    <div style="width: 200px; z-index: 2" class="cebian baise">
         <!-- 头像栏 -->
         <div style="
               padding: 10px;
-              align-items: center; justify-content: center; border-bottom: 1px solid ghostwhite;" class="flex">
-            <img src="https://th.bing.com/th/id/R.3d68613058210eb8682aeedf6281ad82?rik=ug8RJTylVeGCmQ&riu=http%3a%2f%2fpiccn.ihuaben.com%2fpic%2fbook%2f202201%2f1802%2f1642445019530-UP07nem0Fa_960-1278.jpeg%40210w&ehk=OrnDnZ6TDIaQ7AIANFNWBBskxNE5cqpUPA2GENPeuro%3d&risl=&pid=ImgRaw&r=0" 
+              align-items: center; 
+              justify-content: center; 
+              border-bottom: 1px solid rgb(231, 231, 245);
+            " 
+            class="flex">
+          <img src="https://th.bing.com/th/id/R.3d68613058210eb8682aeedf6281ad82?rik=ug8RJTylVeGCmQ&riu=http%3a%2f%2fpiccn.ihuaben.com%2fpic%2fbook%2f202201%2f1802%2f1642445019530-UP07nem0Fa_960-1278.jpeg%40210w&ehk=OrnDnZ6TDIaQ7AIANFNWBBskxNE5cqpUPA2GENPeuro%3d&risl=&pid=ImgRaw&r=0" 
             height="40px" width="40px" alt="">
+          <div style="margin-left: 10px;">BAHzhou</div>
         </div>
         <!-- 导航栏 -->
-        <div></div>
+        <div class="flex1 ">
+          <div class="daohang conter column">导航</div>
+          <div class="daohang conter column">导航</div>
+          <div class="daohang conter column">导航</div>
+          <div class="daohang conter column">导航</div>
+          <div class="daohang conter column">导航</div>
+        </div>
     </div>
     <!-- 主区域  
         flex1:占满比例
@@ -72,17 +117,17 @@
       <!--  第三层 
              flex：默认左右排列 
             overflow只会在内容区的盒子内上下滚动，不会超出盒子-->
-      <div style="overflow: auto" class="flex1 flex">
+      <div style="overflow: auto" class=" shuxliang flex1 flex">
         <!-- 左区 
                 子标签有颜色，父标签就不用使用baise样式-->
         <div style="flex: 3" class="flex column mg8">
           <!-- 数据区  -->
-          <div class="flex">
-            <!-- 数据快 -->
-            <div style="height: 100px" class="flex1 baise mgr8 yinying"></div>
-            <div style="height: 100px" class="flex1 baise mgr8 yinying"></div>
-            <div style="height: 100px" class="flex1 baise mgr8 yinying"></div>
-            <div style="height: 100px" class="flex1 baise yinying"></div>
+          <div class="flex shuxliang">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="shuju flex1 baise mgr8 yinying">数据块</div>
+            <div style="height: 100px" class="shuju flex1 baise mgr8 yinying"></div>
+            <div style="height: 100px" class="shuju flex1 baise mgr8 yinying"></div>
+            <div style="height: 100px" class="shuju flex1 baise yinying"></div>
           </div>
           <!-- 列表区 -->
           <div class="flex column">
@@ -93,9 +138,9 @@
           </div>
         </div>
         <!-- 右区 -->
-        <div style="flex: 1" class="flex column mgr8 mgt8">
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8">
           <!-- 提示区 -->
-          <div style="height: 150px" class="baise yinying"></div>
+          <div style="height: 150px" class="baise yinying">提示区</div>
           <!-- 消息区 -->
           <div style="height: 300px" class="baise mgt8 yinying"></div>
         </div>
