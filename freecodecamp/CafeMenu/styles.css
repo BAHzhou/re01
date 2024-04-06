@@ -1,0 +1,82 @@
+body {
+    /* 将图片设置页面背景 */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+}
+.established {
+    font-style: italic;
+}
+/* 类型选择器，三个标签可以并列 */
+h1,h2,p {
+            text-align: center;
+}
+/* 给标题设置字体 ，逗号间隔备用字体*/
+h1,h2 {
+    font-family: Impact, serif;
+}
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 30px;
+}
+/* id选择器 ：#id名 */
+/* 类选择器：class  */
+.menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    /* 防止在大屏幕中菜单变的太宽 */
+    max-width: 500px;
+}
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+.flavor , .dessert {
+    text-align: left;
+    /* 让种类和价格在同行显示 */
+    width: 75%;
+}
+.price {
+    text-align: right;
+    width: 25%;
+}
+/* 给所有包含在item类元素中的p元素应用该样式 */
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.bottom-line {
+    margin-top: 25px;
+}
+/* FOOTER */
+footer {
+    font-size: 14px;
+}
+a {
+    color: black;
+}
+/* 链接被访问后的颜色 */
+a:visited {
+    color: black;
+}
+/* 链接在鼠标悬停时的颜色 */
+a:hover {
+    color: brown;
+}
+/* 链接被点击时的颜色 */
+a:active {
+    color: brown;
+}
+.address {
+    margin-bottom: 5px;
+}

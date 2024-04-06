@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CatPhotoApp</title>
+    </head>
+  <body>
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <!-- em斜体强调 -->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+            <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <!-- required设置必填 -->
+            <input type="text" name="catphotourl" placeholder="cat photo URL" required id="">
+            <button type="submit">Submit</button>
+            <!-- Indoor前的空格是必须的 -->
+            <fieldset>
+                <legend>Is your cat an indoor or outdoor cat?</legend>
+                <label>
+                    <!-- 相同的name让按钮只能选择一个 -->
+                    <input checked id="indoor" type="radio" name="indoor-outdoor"  value="indoor"> Indoor
+                </label>
+                <label>
+                    <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor            
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>What's your cat's personality?</legend>
+                <!-- 不用套在标签外，label通过for属性跟input的id值相同也能达到关联元素的效果。 -->
+                <input checked type="checkbox" id="loving" name="personality" value="loving"> 
+                <label for="loving">Loving</label> 
+                <input type="checkbox" id="lazy" name="personality" value="lazy"> 
+                <label for="lazy">Lazy</label> 
+                <input type="checkbox" id="energetic" name="personality" value="energetic"> 
+                <label for="energetic">Energetic</label> 
+            </fieldset>
+            <!-- 以上：
+                id属性：是唯一标识标签，常用于css和js中；
+                name属性：1，说明了该输入的类型；2，相同的name属性值会被以数组的形式提交，常用在复选框和单选按钮。 
+                value属性：1，在文本框中是用户可以看到的提示信息；2，在复选框或者单选按钮中因为用户没有输入，所以就会提交勾选的按钮的vlaue属性，与name形成一对，例如上面中的personality=lazy
+            -->
+        </form>
+      </section>
+    </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a> </p>
+    </footer>
+  </body>
+</html>
