@@ -80,3 +80,10 @@ a:active {
 .address {
     margin-bottom: 5px;
 }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* 负值向上穿过容器 */
+    margin-top: -25px;
+}
