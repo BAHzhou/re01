@@ -8,5 +8,16 @@ h1 {
     margin: 10px auto;
 }
 .one {
-    background-color: red;
+    /* 间色为两个最大值，一个0：background-color: rgb(255, 255, 0); */
+    background-color: rgb(255, 255, 0);
+}
+.two {
+    background-color: rgb(0, 255, 255);
+}
+.three {
+    background-color: rgb(255, 0, 255);
+}
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
 }
