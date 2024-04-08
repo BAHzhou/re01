@@ -2,9 +2,12 @@ h1 {
     text-align: center;
 }
 .marker {
-    background-color: red;
     height: 25px;
     width: 200px;
     /* 外边距上下10，左右居中 */
     margin: 10px auto;
+}
+.one {
+    background-color: red;
+    
 }
